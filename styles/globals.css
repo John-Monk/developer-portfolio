@@ -122,3 +122,11 @@ button, a {
 ul {
   list-style: none;
 }
+
+.container {
+  padding: 0 1.5em;
+}
+
+.logo {
+  display: none;
+}
