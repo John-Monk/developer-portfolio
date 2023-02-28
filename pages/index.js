@@ -16,8 +16,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <a href="https://johnmonk.dev/">johnmonk.dev</a>
-        <Nav />
+        <div className="container">
+          <a href="https://johnmonk.dev/">johnmonk.dev</a>
+          <Nav />
+        </div>
       </header>
       <Hero />
       <Portfolio />
