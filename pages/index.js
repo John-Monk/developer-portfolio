@@ -4,6 +4,7 @@ import styles from '@/styles/Home.module.css'
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import Portfolio from '@/components/Portfolio'
+import Contact from '@/components/Contact'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       </header>
       <Hero />
       <Portfolio />
+      <Contact />
     </>
   )
 }
