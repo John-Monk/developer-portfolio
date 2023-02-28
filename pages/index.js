@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
+import Portfolio from '@/components/Portfolio'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Nav />
       </header>
       <Hero />
+      <Portfolio />
     </>
   )
 }
