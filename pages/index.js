@@ -17,6 +17,7 @@ export default function Home() {
         <a href="https://johnmonk.dev/">johnmonk.dev</a>
         <Nav />
       </header>
+      <Hero />
     </>
   )
 }
