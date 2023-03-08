@@ -1,15 +1,25 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    padding-top: 3em;
+}
+
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
-    gap: 1em;
+    gap: 2em;
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
+}
+
+.blurb {
+    font-size: 1.1rem;
 }
 
 .social__media {
