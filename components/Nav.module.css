@@ -12,7 +12,6 @@
 }
 
 .list__item {
-    font-weight: 600;
     position: relative;
     display: flex;
     align-items: center;
