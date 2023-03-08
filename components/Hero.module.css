@@ -1,7 +1,7 @@
 .hero {
     height: 100vh;
     display: flex;
-    padding-top: 3em;
+    padding-top: 1.5em;
 }
 
 .content {
@@ -10,7 +10,7 @@
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    gap: 2em;
+    gap: 1em;
 }
 
 .title {
@@ -19,7 +19,7 @@
 }
 
 .blurb {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .social__media {
@@ -28,8 +28,8 @@
 }
 
 .headshot__container {
-    width: 18em;
-    height: 18em;
+    width: 16em;
+    height: 16em;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
@@ -40,6 +40,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 18em;
+    width: 16em;
     height: auto;
 }
