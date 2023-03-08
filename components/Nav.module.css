@@ -1,0 +1,42 @@
+.nav {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.item__list {
+    display: flex;
+    justify-content: center;
+    gap: 2.5em;
+}
+
+.list__item {
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list__item:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 5em;
+    height: 4em;
+    border-radius: 0.5em 0.5em 0 0;
+    background: orange;
+    transform: translateY(100%);
+}
+
+.active:after {
+    transform: translateY(0%);
+}
+
+.item {
+    padding-bottom: 1em;
+    text-align: center;
+    z-index: 1;
+    color: black
+}
