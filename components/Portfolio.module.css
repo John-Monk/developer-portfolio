@@ -1,0 +1,50 @@
+.section__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.list__container {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+.skill__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5em;
+    padding: 0;
+}
+
+.skill__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3em;
+    background: rgb(255, 174, 13);
+    border-radius: 0.25em;
+}
+
+.skill {
+    width: 3em;
+    height: 3em;
+}
+
+.project__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.project__item{ 
+    width: 100%;
+    border: 2px solid black;
+    height: 10em;
+}
