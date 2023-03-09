@@ -14,15 +14,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <div className="container">
-          <a className='logo' href="https://johnmonk.dev/">johnmonk.dev</a>
-          <Nav />
-        </div>
-      </header>
-      <Hero />
-      <Portfolio />
-      <Contact />
+        <header className={styles.header}>
+            <div className={`container ${styles.content}`}>
+              <a className={styles.logo} href="https://johnmonk.dev/">johnmonk.dev</a>
+              <Nav />
+            </div>
+        </header>
+        <Hero />
+        <Portfolio />
+        <Contact />
     </>
   )
 }

@@ -39,3 +39,37 @@
     z-index: 1;
     color: black
 }
+
+@media screen and (min-width: 900px) {
+    /* .nav {
+        position: static;
+    }
+    
+    .list__item:after {
+        border-radius: 0 0 0.5em 0.5em;
+        transform: translateY(-100%);
+    }
+
+    .active:after {
+        transform: translateY(0%);
+    }
+
+    .item {
+        padding-top: unset;
+    } */
+    .nav {
+        position: unset;
+        width: unset;
+    }
+    .item__list {
+        margin: 0;
+        padding: 0;
+    }
+    .list__item:after {
+        transform: translateY(-100%);
+        border-radius: 0 0 0.5em 0.5em;
+    }
+    .active:after {
+        transform: translateY(0%);
+    }
+}
