@@ -18,7 +18,7 @@ export default function Contact() {
                         </li>
                         <li className={styles.list__item}>
                             <label className={styles.label} htmlFor="message">Message</label>
-                            <textarea className={`${styles.input} ${styles.message__input}`} id='message' type='text' />
+                            <textarea className={`${styles.input} ${styles.message__input}`} rows='3' id='message' type='text' />
                         </li>
                     </ul>
                     <button className={styles.button}>Submit</button>

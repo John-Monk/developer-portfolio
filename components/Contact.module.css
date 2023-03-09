@@ -40,21 +40,42 @@
 }
 
 .label {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    color: rgb(59, 59, 59);
 }
 
 .input {
     all: unset;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border-bottom: 2px solid black;
     resize: none;
     word-wrap: break-word;
+    transition: 200ms;
+}
+
+.input:focus {
+    background-color: rgba(255, 255, 255, 0.146);
+    transition: 200ms;
 }
 
 .button {
     border: 2px solid black;
     padding: 0.25em 0.5em;
     margin: 1.5em 0;
+    border-radius: 0.3em;
+    transition: 200ms;
+}
+
+.button:hover {
+    background: black;
+    color: orange;
+    transition: 200ms;
+}
+
+.button:active {
+    background: orange;
+    color: black;
+    transform: translateY(-0.25em);
 }
 
 .email {
