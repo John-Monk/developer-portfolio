@@ -17,7 +17,7 @@ export default function Portfolio() {
     <section className="portfolio">
         <div className={`container ${styles.section__container}`}>
             <section className="skills">
-                <h2 className={styles.title}>Skills</h2>
+                <h2 className={styles.title}>My Skills</h2>
                     <ul className={styles.skill__list}>
                         <li className={styles.skill__item}><Image className={styles.skill} src={html} alt='HTML logo'/></li>
                         <li className={styles.skill__item}><Image className={styles.skill} src={css} alt='CSS logo'/></li>
@@ -32,7 +32,7 @@ export default function Portfolio() {
                     </ul>
             </section>
             <section className="projects">
-                <h2 className={styles.title}>Projects</h2>
+                <h2 className={styles.title}>Recent Work</h2>
                     <ul className={styles.project__list}>
                         <li className={styles.project__item}><Image /></li>
                         <li className={styles.project__item}><Image /></li>
