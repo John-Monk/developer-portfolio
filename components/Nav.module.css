@@ -41,22 +41,6 @@
 }
 
 @media screen and (min-width: 900px) {
-    /* .nav {
-        position: static;
-    }
-    
-    .list__item:after {
-        border-radius: 0 0 0.5em 0.5em;
-        transform: translateY(-100%);
-    }
-
-    .active:after {
-        transform: translateY(0%);
-    }
-
-    .item {
-        padding-top: unset;
-    } */
     .nav {
         position: unset;
         width: unset;
