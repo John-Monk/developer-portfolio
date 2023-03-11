@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styles from './Hero.module.css';
 import headshot from '../public/headshot.jpg';
-import {AiFillLinkedin, AiFillGithub, AiOutlineTwitter, AiOutlineMail} from 'react-icons/ai';
+import {AiFillLinkedin, AiFillGithub, AiOutlineTwitter} from 'react-icons/ai';
 
 export default function Hero() {
   return (

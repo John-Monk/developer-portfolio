@@ -80,4 +80,7 @@
 
 .email {
     margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
 }

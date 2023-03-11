@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Contact.module.css';
+import {AiOutlineMail} from 'react-icons/ai';
 
 export default function Contact() {
   return (
@@ -23,7 +24,7 @@ export default function Contact() {
                     </ul>
                     <button className={styles.button}>Submit</button>
                 </form>
-            <a className={styles.email} href="#">johntmonk1@gmail.com</a>
+            <a className={styles.email} href="mailto:johntmonk1@gmail.com"><AiOutlineMail />johntmonk1@gmail.com</a>
         </div>
     </section>
   )
