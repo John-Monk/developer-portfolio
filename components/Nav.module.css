@@ -1,20 +1,21 @@
 .nav {
     position: fixed;
     width: 100%;
-    left: 0;
     bottom: 0;
+    left: 0;
+    z-index: 10;
 }
 
 .item__list {
     display: flex;
-    justify-content: center;
-    gap: 2.5em;
+    width: 18em;
+    margin: 0 auto;
 }
 
 .list__item {
     position: relative;
+    flex: 1;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -35,9 +36,7 @@
 
 .item {
     padding-bottom: 1em;
-    text-align: center;
     z-index: 1;
-    color: black
 }
 
 @media screen and (min-width: 900px) {
@@ -46,9 +45,14 @@
         width: unset;
     }
     .item__list {
-        margin: 0;
-        padding: 0;
+        width: 16em;
+        justify-content: space-between;
     }
+
+    .list__item {
+        flex: unset;
+    }
+
     .list__item:after {
         transform: translateY(-100%);
         border-radius: 0 0 0.5em 0.5em;
