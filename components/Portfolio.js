@@ -14,8 +14,8 @@ import Image from 'next/image';
 
 export default function Portfolio() {
   return (
-    <section className={styles.portfolio}>
-        <div className={`container ${styles.section__container}`}>
+    <section className={`container ${styles.portfolio}`}>
+        <div className={`${styles.section__container}`}>
             <section className="skills">
                 <h2 className={styles.title}>My Skills</h2>
                     <ul className={styles.skill__list}>
