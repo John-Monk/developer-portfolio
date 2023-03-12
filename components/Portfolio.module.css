@@ -50,6 +50,20 @@
 }
 
 @media screen and (min-width: 900px) {
+    .portfolio {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section__container {
+        justify-content: center;
+        flex-basis: 100%;
+        gap: 4em;
+    }
+
     .project__list {
         flex-direction: row;
         justify-content: space-around;
