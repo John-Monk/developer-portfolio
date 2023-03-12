@@ -37,6 +37,7 @@ export default function Portfolio() {
                         <li className={styles.project__item}><Image /></li>
                         <li className={styles.project__item}><Image /></li>
                         <li className={styles.project__item}><Image /></li>
+                        <li className={styles.project__item}><Image /></li>
                     </ul>
             </section>
         </div>

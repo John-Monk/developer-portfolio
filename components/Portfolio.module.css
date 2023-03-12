@@ -38,13 +38,13 @@
 }
 
 .project__list {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
 }
 
 .project__item{ 
-    width: 100%;
     border: 2px solid black;
     height: 10em;
 }
@@ -56,20 +56,5 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    .section__container {
-        justify-content: center;
-        flex-basis: 100%;
-        gap: 4em;
-    }
-
-    .project__list {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .project__item {
-        width: 14em;
     }
 }
