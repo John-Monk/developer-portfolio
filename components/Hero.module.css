@@ -22,6 +22,7 @@
 
 .blurb {
     font-size: 1.25rem;
+    width: 20em;
 }
 
 .social__media {
@@ -62,7 +63,16 @@
     .icon {
         font-size: 2.5em;
     }
+}
 
+@media screen and (min-width: 630px){
+    .content {
+        gap: 2em;
+    }
+
+    .blurb {
+        width: 23em;
+    }
 }
 
 @media screen and (min-width: 900px){
@@ -84,6 +94,10 @@
     .title {
         white-space: nowrap;
         font-size: 3.75rem;
+    }
+
+    .blurb {
+        width: unset;
     }
 
     .headshot__container {
