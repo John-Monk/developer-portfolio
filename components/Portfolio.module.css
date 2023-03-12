@@ -16,25 +16,29 @@
 }
 
 .skill__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0.5em;
-    padding: 0;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .skill__item {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
-    padding: 0.3em;
+    /* padding: 10em; */
+    padding-top: 100%;
     background: rgb(255, 174, 13);
     border-radius: 0.25em;
 }
 
 .skill {
-    width: 3em;
-    height: 3em;
+    width: 3.2em;
+    height: 3.2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .project__list {
@@ -47,6 +51,40 @@
 .project__item{ 
     border: 2px solid black;
     height: 10em;
+}
+
+@media screen and (min-width: 600px) {
+    .skill__list {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.25em;
+    }
+
+    .skill__item {
+        padding: 1.5em;
+    }
+
+    .skill {
+        width: 2.3em;
+        height: 2.3em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .skill__list {
+        gap: 0.5em;
+    }
+
+    .skill__item {
+        padding: 0.5em;
+    }
+
+    .skill {
+        position: unset;
+        transform: unset;
+        width: 3em;
+        height: 3em;
+    }
 }
 
 @media screen and (min-width: 900px) {
