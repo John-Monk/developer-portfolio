@@ -7,7 +7,7 @@ export default function Contact() {
     <section className={`container ${styles.contact}`}>
         <h2 className={styles.title}>Get in touch</h2>
         <div className={styles.contact__container}>
-                <form className={styles.form} action="">
+                <form onSubmit={e => e.preventDefault()} className={styles.form} action="">
                     <ul className={styles.list}>
                         <li className={styles.list__item}>
                             <label className={styles.label} htmlFor="name">Name</label>
