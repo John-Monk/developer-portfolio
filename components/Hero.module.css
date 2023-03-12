@@ -83,5 +83,15 @@
 
     .title {
         white-space: nowrap;
+        font-size: 3.75rem;
+    }
+
+    .headshot__container {
+        width: 19em;
+        height: 19em;
+    }
+    
+    .headshot {
+        width: 19em;
     }
 }
