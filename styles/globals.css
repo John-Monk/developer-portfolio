@@ -112,12 +112,16 @@ a {
   --theme: rgb(86, 139, 86);
 }
 
-* {
+*, *::after, *:hover {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   transition: 200ms;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
