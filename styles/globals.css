@@ -121,6 +121,10 @@ a {
   transition: 200ms;
 }
 
+body {
+  background: var(--accent);
+}
+
 button, a {
   all: unset;
   cursor: pointer;
