@@ -9,6 +9,22 @@
 @media screen and (min-width: 900px){
   .logo {
     display: block;
+    position: relative;
+  }
+
+  .logo:after {
+    position: absolute;
+    content: '';
+    border-bottom: 2px solid var(--theme);
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    transition: 300ms;
+    transition-delay: 1000ms;
+  }
+
+  .logo__load:after {
+    width: 100%;
   }
 
   .header {

@@ -32,6 +32,13 @@
     transition: 300ms;
 }
 
+.page__load__active:after {
+    transform: translateY(0%);
+    background: var(--theme);
+    transition: 300ms;
+    transition-delay: 1600ms;
+}
+
 .active:after {
     transform: translateY(0%);
     background: var(--theme);
@@ -71,6 +78,11 @@
         transform: translateY(-100%);
         border-radius: 0 0 0.5em 0.5em;
     }
+
+    .page__load__active:after {
+        transform: translateY(0%);
+    }
+
     .active:after {
         transform: translateY(0%);
     }

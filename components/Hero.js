@@ -4,9 +4,9 @@ import styles from './Hero.module.css';
 import headshot from '../public/headshot.jpg';
 import {AiFillLinkedin, AiFillGithub, AiOutlineTwitter} from 'react-icons/ai';
 
-export default function Hero() {
+export default function Hero({pageLoad}) {
   return (
-    <section className={`container ${styles.hero}`}>
+    <section className={`container ${styles.hero} ${pageLoad ? styles.hero__active : ''}`}>
           <div className={styles.content}>
             <h1 className={styles.title}>Hi, I'm John</h1>
             <p className={styles.blurb}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestiae, 

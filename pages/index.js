@@ -8,6 +8,7 @@ import { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('');
+  const [pageLoad, setPageLoad] = useState(false);
 
   console.log(currentSection)
     
@@ -38,6 +39,16 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    let timeout1 = setTimeout(() => {
+      setPageLoad(true);
+    }, 500);
+
+    return () => {
+      clearTimeout(timeout1);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -48,11 +59,11 @@ export default function Home() {
       </Head>
         <header className={styles.header}>
             <div className={`container ${styles.content}`}>
-              <a className={styles.logo} href="https://johnmonk.dev/">johnmonk.dev</a>
-              <Nav currentSection={currentSection}/>
+              <a className={`${styles.logo} ${pageLoad ? styles.logo__load : ''}`} href="https://johnmonk.dev/">johnmonk.dev</a>
+              <Nav currentSection={currentSection} pageLoad={pageLoad}/>
             </div>
         </header>
-        <div id='hero' ref={heroRef}><Hero /></div>
+        <div id='hero' ref={heroRef}><Hero pageLoad={pageLoad}/></div>
         <div id='portfolio' ref={portfolioRef}><Portfolio /></div>
         <div id='contact' ref={contactRef}><Contact /></div>
     </>
