@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: orange;
+    background: var(--theme);
     border-radius: 0.5em;
     padding: 2em 3em;
 }
@@ -40,13 +40,13 @@
 
 .label {
     font-size: 1.05rem;
-    color: rgb(59, 59, 59);
+    color: var(--main);
 }
 
 .input {
     all: unset;
     font-size: 1rem;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--main);
     resize: none;
     word-wrap: break-word;
     transition: 200ms;
@@ -58,22 +58,23 @@
 }
 
 .button {
-    border: 2px solid black;
+    border: 2px solid var(--main);
     padding: 0.25em 0.5em;
     margin: 1.5em 0;
     border-radius: 0.3em;
     transition: 200ms;
+    color: var(--main)
 }
 
 .button:hover {
-    background: black;
-    color: orange;
+    background: var(--main);
+    color: var(--theme);
     transition: 200ms;
 }
 
 .button:active {
-    background: orange;
-    color: black;
+    background: var(--theme);
+    color: var(--main);
     transform: translateY(-0.25em);
 }
 
@@ -82,4 +83,5 @@
     display: flex;
     align-items: center;
     gap: 0.25em;
+    color: var(--main)
 }
