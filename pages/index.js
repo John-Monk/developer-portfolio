@@ -41,22 +41,17 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    let timeout1, timeout2
-    // timeout1 = setTimeout(() => {
-    //   setPageLoad(true);
-    //   setNavLoad(true);
-    // });
+    let timeout1
 
     setPageLoad(true);
     setNavLoad(true);
 
-    timeout2 = setTimeout(() => {
+    timeout1 = setTimeout(() => {
       setNavLoad(false);
     }, 2000)
 
     return () => {
-      // clearTimeout(timeout1);
-      clearTimeout(timeout2);
+      clearTimeout(timeout1);
     };
   }, []);
 
@@ -68,7 +63,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <header className={styles.header}>
+        <header className={`${styles.header} ${pageLoad ? styles.header__active : ''}`}>
             <div className={`container ${styles.content}`}>
               <a className={`${styles.logo} ${pageLoad ? styles.logo__load : ''}`} href="https://johnmonk.dev/">johnmonk.dev</a>
               <Nav currentSection={currentSection} pageLoad={pageLoad} navLoad={navLoad}/>

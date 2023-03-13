@@ -28,15 +28,7 @@
     border-radius: 0.5em 0.5em 0 0;
     background: white;
     transform: translateY(100%);
-    transition-delay: 400ms;
     transition: 300ms;
-}
-
-.page__load__active:after {
-    transform: translateY(0%);
-    background: var(--theme);
-    transition: 600ms;
-    transition-delay: 1800ms;
 }
 
 .active:after {
@@ -81,6 +73,9 @@
 
     .page__load__active:after {
         transform: translateY(0%);
+        background: var(--theme);
+        transition: 600ms;
+        transition-delay: 2500ms;
     }
 
     .active:after {

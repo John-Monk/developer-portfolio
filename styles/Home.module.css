@@ -19,8 +19,10 @@
     width: 0%;
     bottom: 0;
     left: 0;
+    /* transition: 800ms;
+    transition-delay: 2000ms; */
     transition: 800ms;
-    transition-delay: 1000ms;
+    transition-delay: 1800ms;
   }
 
   .logo__load:after {
@@ -33,7 +35,15 @@
     top: 0;
     left: 0;
     z-index: 10;
-    color: var(--main)
+    color: var(--main);
+    opacity: 0;
+    transition: 200ms;
+  }
+
+  .header__active {
+    opacity: 1;
+    transition: 800ms;
+    transition-delay: 1000ms;
   }
 
   .content {

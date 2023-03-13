@@ -111,6 +111,11 @@ a {
   --accent: black;
   --theme: orange;
 }
+/* :root {
+  --main: white;
+  --accent: #3a3335;
+  --theme: #fdf0d5;
+} */
 
 *, *::after, *:hover {
   margin: 0;
