@@ -18,6 +18,7 @@
 .title {
     font-size: 3rem;
     margin-bottom: 0.5em;
+    color: var(--main);
 }
 
 .form {
