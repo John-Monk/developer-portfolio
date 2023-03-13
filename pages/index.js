@@ -4,6 +4,7 @@ import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import Portfolio from '@/components/Portfolio'
 import Contact from '@/components/Contact'
+import {AiFillGithub} from 'react-icons/ai';
 import { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
@@ -72,6 +73,9 @@ export default function Home() {
         <div id='hero' ref={heroRef}><Hero pageLoad={pageLoad}/></div>
         <div id='portfolio' ref={portfolioRef}><Portfolio /></div>
         <div id='contact' ref={contactRef}><Contact /></div>
+        <footer class={`container ${styles.footer}`}>
+          <span className={styles.footer__span}>Design by <a className={styles.footer__link} target="_blank" href="https://www.linkedin.com/in/john-monk/">John Monk</a> | <a className={`${styles.footer__link} ${styles.footer__github}`} target="_blank" href="https://github.com/John-Monk"><AiFillGithub className={styles.footer__icon}/>GitHub</a></span>
+        </footer>
     </>
   )
 }

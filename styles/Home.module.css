@@ -6,6 +6,35 @@
   display: none;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 9em;
+  color: var(--main);
+  font-size: 0.7rem;
+}
+
+.footer__link {
+  color: var(--theme);
+}
+
+.footer__span {
+  display: flex;
+  gap: 0.5em;
+}
+
+.footer__github {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.2em;
+}
+
+.footer__link:hover {
+  opacity: 0.8;
+}
+
 @media screen and (min-width: 900px){
   .logo {
     display: block;
@@ -51,5 +80,11 @@
     align-items: center;
     justify-content: space-between;
     height: 5em;
+  }
+
+  .footer {
+    margin-bottom: unset;
+    height: 6em;
+    align-items: center;
   }
 }
