@@ -35,8 +35,8 @@
 .page__load__active:after {
     transform: translateY(0%);
     background: var(--theme);
-    transition: 300ms;
-    transition-delay: 1600ms;
+    transition: 600ms;
+    transition-delay: 1800ms;
 }
 
 .active:after {

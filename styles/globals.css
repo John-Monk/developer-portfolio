@@ -109,7 +109,7 @@ a {
 :root {
   --main: white;
   --accent: black;
-  --theme: rgb(86, 139, 86);
+  --theme: orange;
 }
 
 *, *::after, *:hover {

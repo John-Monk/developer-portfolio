@@ -5,13 +5,13 @@
     padding-top: 1.5em;
     align-items: center;
     opacity: 0;
-    transform: translateY(-10%);
+    transform: translateY(-15%);
 }
 
 .hero__active {
     opacity: 1;
     transform: translateY(0);
-    transition: 800ms;
+    transition: 1200ms;
 }
 
 .content {
