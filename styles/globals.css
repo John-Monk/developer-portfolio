@@ -106,6 +106,12 @@ a {
   }
 } */
 
+:root {
+  --main: black;
+  --accent: white;
+  --theme: orange;
+}
+
 
 * {
   margin: 0;
