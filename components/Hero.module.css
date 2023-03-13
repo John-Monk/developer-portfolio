@@ -87,26 +87,38 @@
         align-items: flex-start;
         text-align: left;
         flex-basis: 0.5;
-        gap: 1em;
+        gap: 1.5em;
         margin-top: unset;
     }
 
     .title {
         white-space: nowrap;
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
 
+    .blurb {
+        width: unset;
+        font-size: 1.1rem;
+    }
+
+    .headshot__container, .headshot {
+        width: 16em;
+        height: 16em;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .title {
+        font-size: 4.5rem;
+    }
+    
     .blurb {
         width: unset;
         font-size: 1.3rem;
     }
 
     .headshot__container, .headshot {
-        width: 19em;
-        height: 19em;
+        width: 20em;
+        height: 20em;
     }
-}
-
-@media screen and (min-width: 1200px){
-    
 }
