@@ -54,6 +54,13 @@
 }
 
 @media screen and (min-width: 600px) {
+    .portfolio {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .skill__list {
         display: flex;
         justify-content: space-between;
@@ -88,15 +95,11 @@
 }
 
 @media screen and (min-width: 900px) {
-    .portfolio {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
     .section__container {
         width: 100%;
+    }
+
+    .project__item{ 
+        height: 12em;
     }
 }
