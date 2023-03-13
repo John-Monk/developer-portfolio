@@ -4,8 +4,40 @@ import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import Portfolio from '@/components/Portfolio'
 import Contact from '@/components/Contact'
+import { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
+  const [currentSection, setCurrentSection] = useState('');
+
+  console.log(currentSection)
+    
+  const heroRef = useRef(null);
+  const portfolioRef = useRef(null);
+  const contactRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.intersectionRatio > 0) {
+            setCurrentSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.8 }
+    );
+
+    observer.observe(heroRef.current);
+    observer.observe(portfolioRef.current);
+    observer.observe(contactRef.current);
+
+    return () => {
+      observer.unobserve(heroRef.current);
+      observer.unobserve(portfolioRef.current);
+      observer.unobserve(contactRef.current);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -17,12 +49,12 @@ export default function Home() {
         <header className={styles.header}>
             <div className={`container ${styles.content}`}>
               <a className={styles.logo} href="https://johnmonk.dev/">johnmonk.dev</a>
-              <Nav />
+              <Nav currentSection={currentSection}/>
             </div>
         </header>
-        <Hero />
-        <Portfolio />
-        <Contact />
+        <div id='hero' ref={heroRef}><Hero /></div>
+        <div id='portfolio' ref={portfolioRef}><Portfolio /></div>
+        <div id='contact' ref={contactRef}><Contact /></div>
     </>
   )
 }
