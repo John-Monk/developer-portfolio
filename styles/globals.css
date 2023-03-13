@@ -107,11 +107,10 @@ a {
 } */
 
 :root {
-  --main: black;
-  --accent: white;
-  --theme: orange;
+  --main: white;
+  --accent: black;
+  --theme: rgb(86, 139, 86);
 }
-
 
 * {
   margin: 0;
