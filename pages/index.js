@@ -9,6 +9,7 @@ import { useState, useEffect, useRef } from 'react';
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('');
   const [pageLoad, setPageLoad] = useState(false);
+  const [navLoad, setNavLoad] = useState(false);
 
   console.log(currentSection)
     
@@ -40,12 +41,22 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    let timeout1 = setTimeout(() => {
-      setPageLoad(true);
-    }, 500);
+    let timeout1, timeout2
+    // timeout1 = setTimeout(() => {
+    //   setPageLoad(true);
+    //   setNavLoad(true);
+    // });
+
+    setPageLoad(true);
+    setNavLoad(true);
+
+    timeout2 = setTimeout(() => {
+      setNavLoad(false);
+    }, 2000)
 
     return () => {
-      clearTimeout(timeout1);
+      // clearTimeout(timeout1);
+      clearTimeout(timeout2);
     };
   }, []);
 
@@ -60,7 +71,7 @@ export default function Home() {
         <header className={styles.header}>
             <div className={`container ${styles.content}`}>
               <a className={`${styles.logo} ${pageLoad ? styles.logo__load : ''}`} href="https://johnmonk.dev/">johnmonk.dev</a>
-              <Nav currentSection={currentSection} pageLoad={pageLoad}/>
+              <Nav currentSection={currentSection} pageLoad={pageLoad} navLoad={navLoad}/>
             </div>
         </header>
         <div id='hero' ref={heroRef}><Hero pageLoad={pageLoad}/></div>
