@@ -19,7 +19,7 @@ export default function Hero({pageLoad}) {
             </div>
             <div className="image">
               <div className={styles.headshot__container}>
-                  <Image className={styles.headshot} src={headshot}/>
+                  <Image loading='eager' className={styles.headshot} src={headshot} alt='portrait of John Monk'/>
               </div>
             </div>
     </section>
