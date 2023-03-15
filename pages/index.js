@@ -5,12 +5,14 @@ import Hero from '@/components/Hero'
 import Portfolio from '@/components/Portfolio'
 import Contact from '@/components/Contact'
 import {AiFillGithub} from 'react-icons/ai';
+import {MdOutlineLightMode, MdOutlineDarkMode} from 'react-icons/md';
 import { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('');
   const [pageLoad, setPageLoad] = useState(false);
   const [navLoad, setNavLoad] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   console.log(currentSection)
     
@@ -70,6 +72,7 @@ export default function Home() {
               <Nav currentSection={currentSection} pageLoad={pageLoad} navLoad={navLoad}/>
             </div>
         </header>
+        {/* <button onClick={() => setDarkMode(!darkMode)} className={styles.theme__toggle}>{darkMode ? <MdOutlineDarkMode className={styles.theme__icon} /> : <MdOutlineLightMode className={styles.theme__icon} />}</button> */}
         <div id='hero' ref={heroRef}><Hero pageLoad={pageLoad}/></div>
         <div id='portfolio' ref={portfolioRef}><Portfolio /></div>
         <div id='contact' ref={contactRef}><Contact /></div>
