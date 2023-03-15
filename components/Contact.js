@@ -21,7 +21,8 @@ export default function Contact() {
     <section className={`container ${styles.contact}`}>
         <h2 className={styles.title}>Get in touch</h2>
         <div className={styles.contact__container}>
-                <form onSubmit={e => formSubmit(e)} className={styles.form} name="contact" action="POST" data-netlify="true">
+                <form className={styles.form} name="contact" action="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
                     <ul className={styles.list}>
                         <li className={styles.list__item}>
                             <label className={styles.label} htmlFor="name">Name</label>
