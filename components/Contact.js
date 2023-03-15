@@ -7,15 +7,23 @@ export default function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+
+    const [submitterName, setSubmitterName] = useState('');
     const [submitSuccess, setSubmitSuccess] = useState(false);
 
-    useEffect(() => {
-        let timeout = setTimeout(() => {
-            setSubmitSuccess(false)
-        }, 500)
+    console.log(submitSuccess)
 
-        clearTimeout(timeout)
-    }, [submitSuccess])
+    useEffect(() => {
+      let timeout;
+
+      timeout = setTimeout(() => {
+        setSubmitSuccess(false);
+      }, 4000);
+
+      return () => {
+        clearTimeout(timeout);
+      };
+    }, [submitSuccess]);
 
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -27,12 +35,15 @@ export default function Contact() {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString(),
-      }).then(() => {
-        setSubmitSuccess(true);
-        setName('');
-        setEmail('');
-        setMessage('');
-      }).catch((error) => alert('Something went wrong.'))
+      })
+        .then(() => {
+          setSubmitSuccess(true);
+          setSubmitterName(name);
+          setName('');
+          setEmail('');
+          setMessage('');
+        })
+        .catch((error) => alert('Something went wrong.'));
     };
 
 
@@ -40,20 +51,21 @@ export default function Contact() {
     <section className={`container ${styles.contact}`}>
         <h2 className={styles.title}>Get in touch</h2>
         <div className={styles.contact__container}>
+                {submitSuccess && <p className={styles.submission__response}>Thanks for reaching out {submitterName}! I'll get back with you shortly.</p>}
                 <form className={styles.form} onSubmit={handleSubmit} name="contact" method="POST" action="#contact" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact" />
                     <ul className={styles.list}>
                         <li className={styles.list__item}>
                             <label className={styles.label} htmlFor="name">Name</label>
-                            <input onChange={(e) => setName(e.target.value)} className={styles.input} id="name" name="name" type="text" value={name}/>
+                            <input onChange={(e) => setName(e.target.value)} className={styles.input} id="name" name="name" type="text" value={name} required/>
                         </li>
                         <li className={styles.list__item}>
                             <label className={styles.label} htmlFor="email">E-Mail</label>
-                            <input onChange={(e) => setEmail(e.target.value)} className={styles.input} id="email" name="email" type="text" value={email}/>
+                            <input onChange={(e) => setEmail(e.target.value)} className={styles.input} id="email" name="email" type="text" value={email} required/>
                         </li>
                         <li className={styles.list__item}>
                             <label className={styles.label} htmlFor="message">Message</label>
-                            <textarea onChange={(e) => setMessage(e.target.value)} className={`${styles.input} ${styles.message__input}`} name="message" rows="3" id="message" type="text" value={message}/>
+                            <textarea onChange={(e) => setMessage(e.target.value)} className={`${styles.input} ${styles.message__input}`} name="message" rows="3" id="message" type="text" value={message} required/>
                         </li>
                     </ul>
                     <button className={styles.button}>Submit</button>
