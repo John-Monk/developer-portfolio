@@ -1,19 +1,38 @@
 import React from "react"
 import styles from "./Contact.module.css";
 import {AiOutlineMail} from "react-icons/ai";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [submitSuccess, setSubmitSuccess] = useState(false);
 
-    const formSubmit = (e) => {
-        // e.preventDefault();
+    useEffect(() => {
+        let timeout = setTimeout(() => {
+            setSubmitSuccess(false)
+        }, 500)
 
-        setName("");
-        setEmail("");
-        setMessage("");
+        clearTimeout(timeout)
+    }, [submitSuccess])
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+
+      const contactForm = e.target;
+      const formData = new FormData(contactForm);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      }).then(() => {
+        setSubmitSuccess(true);
+        setName('');
+        setEmail('');
+        setMessage('');
+      }).catch((error) => alert('Something went wrong.'))
     };
 
 
@@ -21,7 +40,7 @@ export default function Contact() {
     <section className={`container ${styles.contact}`}>
         <h2 className={styles.title}>Get in touch</h2>
         <div className={styles.contact__container}>
-                <form className={styles.form} name="contact" method="POST" action="#contact" data-netlify="true">
+                <form className={styles.form} onSubmit={handleSubmit} name="contact" method="POST" action="#contact" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact" />
                     <ul className={styles.list}>
                         <li className={styles.list__item}>
