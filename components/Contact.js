@@ -1,19 +1,19 @@
-import React from 'react'
-import styles from './Contact.module.css';
-import {AiOutlineMail} from 'react-icons/ai';
-import { useState } from 'react';
+import React from "react"
+import styles from "./Contact.module.css";
+import {AiOutlineMail} from "react-icons/ai";
+import { useState } from "react";
 
 export default function Contact() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
 
     const formSubmit = (e) => {
         // e.preventDefault();
 
-        setName('');
-        setEmail('');
-        setMessage('');
+        setName("");
+        setEmail("");
+        setMessage("");
     };
 
 
@@ -26,15 +26,15 @@ export default function Contact() {
                     <ul className={styles.list}>
                         <li className={styles.list__item}>
                             <label className={styles.label} htmlFor="name">Name</label>
-                            <input onChange={(e) => setName(e.target.value)} className={styles.input} id='name' type="text" value={name}/>
+                            <input onChange={(e) => setName(e.target.value)} className={styles.input} id="name" name="name" type="text" value={name}/>
                         </li>
                         <li className={styles.list__item}>
                             <label className={styles.label} htmlFor="email">E-Mail</label>
-                            <input onChange={(e) => setEmail(e.target.value)} className={styles.input} id='email' type="text" value={email}/>
+                            <input onChange={(e) => setEmail(e.target.value)} className={styles.input} id="email" name="email" type="text" value={email}/>
                         </li>
                         <li className={styles.list__item}>
                             <label className={styles.label} htmlFor="message">Message</label>
-                            <textarea onChange={(e) => setMessage(e.target.value)} className={`${styles.input} ${styles.message__input}`} rows='3' id='message' type='text' value={message}/>
+                            <textarea onChange={(e) => setMessage(e.target.value)} className={`${styles.input} ${styles.message__input}`} name="message" rows="3" id="message" type="text" value={message}/>
                         </li>
                     </ul>
                     <button className={styles.button}>Submit</button>
