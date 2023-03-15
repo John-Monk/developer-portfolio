@@ -9,7 +9,7 @@ export default function Contact() {
     const [message, setMessage] = useState('');
 
     const formSubmit = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
 
         setName('');
         setEmail('');
