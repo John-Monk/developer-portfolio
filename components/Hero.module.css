@@ -35,14 +35,26 @@
     color: var(--main);
 }
 
-.social__media {
+.social__media__list {
     display: flex;
     gap: 1em;
+}
+
+.list__item:hover {
+    transform: translateY(-0.15em);
 }
 
 .icon {
     font-size: 2em;
     color: var(--theme);
+}
+
+.icon:hover {
+    opacity: 0.8;
+}
+
+.icon:active {
+    opacity: 0.5;
 }
 
 .headshot__container {

@@ -11,10 +11,10 @@ export default function Hero({pageLoad}) {
             <h1 className={styles.title}>Hi, I'm John</h1>
             <p className={styles.blurb}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestiae, 
             obcaecati aliquam reiciendis provident non nam officiis quia, odit deleniti similique soluta, voluptatum accusantium iusto.</p>
-                <ul className={styles.social__media}>
-                    <li><a className={styles.icon} href="#"><AiFillLinkedin /></a></li>
-                    <li><a className={styles.icon} href="#"><AiFillGithub /></a></li>
-                    <li><a className={styles.icon} href="#"><AiOutlineTwitter /></a></li>
+                <ul className={styles.social__media__list}>
+                    <li className={styles.list__item}><a className={styles.icon} target="_blank" href="https://www.linkedin.com/in/john-monk/"><AiFillLinkedin /></a></li>
+                    <li className={styles.list__item}><a className={styles.icon} target="_blank" href="https://github.com/John-Monk"><AiFillGithub /></a></li>
+                    <li className={styles.list__item}><a className={styles.icon} target="_blank" href="https://twitter.com/_JohnMonk"><AiOutlineTwitter /></a></li>
                 </ul>
             </div>
             <div className="image">
