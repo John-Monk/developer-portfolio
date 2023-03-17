@@ -77,7 +77,7 @@ export default function Home() {
         <div id='portfolio' ref={portfolioRef}><Portfolio /></div>
         <div id='contact' ref={contactRef}><Contact /></div>
         <footer class={`container ${styles.footer}`}>
-          <span className={styles.footer__span}>Design by <a className={styles.footer__link} target="_blank" href="https://www.linkedin.com/in/john-monk/">John Monk</a> | <a className={`${styles.footer__link} ${styles.footer__github}`} target="_blank" href="https://github.com/John-Monk"><AiFillGithub className={styles.footer__icon}/>GitHub</a></span>
+          <span className={styles.footer__span}>Designed by <a className={styles.footer__link} target="_blank" href="https://www.linkedin.com/in/john-monk/">John Monk</a> | <a className={`${styles.footer__link} ${styles.footer__github}`} target="_blank" href="https://github.com/John-Monk"><AiFillGithub className={styles.footer__icon}/>GitHub</a></span>
         </footer>
     </>
   )
