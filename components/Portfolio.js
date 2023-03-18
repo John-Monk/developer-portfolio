@@ -11,6 +11,8 @@ import nodejs from '../public/nodejs.svg';
 import sass from '../public/sass.svg';
 import reactjs from '../public/reactjs.svg';
 import Image from 'next/image';
+import ProjectCard from './ProjectCard';
+import restaurantProject from '../public/restaurant.webp';
 
 export default function Portfolio() {
   return (
@@ -34,7 +36,7 @@ export default function Portfolio() {
             <section className="projects">
                 <h2 className={styles.title}>Recent Work</h2>
                     <ul className={styles.project__list}>
-                        <li className={styles.project__item}><Image /></li>
+                        <li className={styles.project__item}><ProjectCard image={restaurantProject} live={'https://incredible-medovik-5ae8d9.netlify.app/'} code={'https://github.com/John-Monk/restaurant-landing'}/></li>
                         <li className={styles.project__item}><Image /></li>
                         <li className={styles.project__item}><Image /></li>
                         <li className={styles.project__item}><Image /></li>
