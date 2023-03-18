@@ -51,7 +51,7 @@ export default function Contact() {
     <section className={`container ${styles.contact}`}>
         <h2 className={styles.title}>Get in touch</h2>
         <div className={styles.contact__container}>
-                <p className={`${styles.submission__response} ${submitSuccess ? styles.submission__response__active : ''}`}>Thanks for reaching out{submitterName.length < 10 ? `, ${submitterName}` : ''}! I'll get back with you shortly.</p>
+                <p className={`${styles.submission__response} ${submitSuccess ? styles.submission__response__active : ''}`}>Thanks for reaching out{submitterName.split(' ')[0].length < 10 ? `, ${submitterName.split(' ')[0]}` : ''}! I'll get back with you shortly.</p>
                 <form className={styles.form} onSubmit={handleSubmit} name="contact" method="POST" action="#contact" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact" />
                     <ul className={styles.list}>
