@@ -9,8 +9,10 @@ export default function Hero({pageLoad}) {
     <section className={`container ${styles.hero} ${pageLoad ? styles.hero__active : ''}`}>
           <div className={styles.content}>
             <h1 className={styles.title}>Hi, I'm John</h1>
-            <p className={styles.blurb}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestiae, 
-            obcaecati aliquam reiciendis provident non nam officiis quia, odit deleniti similique soluta, voluptatum accusantium iusto.</p>
+            <p className={styles.blurb}>
+            I'm a full-stack software engineer ready to turn your ideas into code. 
+            Whether it's a static site for your business or a full stack web app for your next big idea, I'm ready to help make it a reality.
+            </p>
                 <ul className={styles.social__media__list}>
                     <li className={styles.list__item}><a className={styles.icon} target="_blank" href="https://www.linkedin.com/in/john-monk/"><AiFillLinkedin /></a></li>
                     <li className={styles.list__item}><a className={styles.icon} target="_blank" href="https://github.com/John-Monk"><AiFillGithub /></a></li>
