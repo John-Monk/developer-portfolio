@@ -5,7 +5,7 @@
 <h2>How It's Made</h2>
 <b>Tech used:</b> HTML, CSS, JavaScript, NextJS, Netlify<br>
 <p>I'm a big fan of ReactJS, once you've got a grip on a few important hooks you can do so many things so quickly. That coupled with components makes it incredibly capable for building out big and small web applications and keeping them maintained. I wanted those perks of React, but for making a static site it was a bit overkill, which is why I opted to use NextJS. Since Next supports server side rendering with statically generated HTML, it was the perfect choice for creating my simple portfolio. The other perk was the fact that Next is fully supported by Netlify, so hosting my site would be dead simple.</p><br>
-<p>I took my time and built out each piece of my site as a component and added styling with CSS modules. I've become a big fan of CSS modules since they keep all styling separate and there's no need to worry about repeating a classname and having to worry about accidentally overriding styles.</p>
+<p>I took my time and built out each piece of my site as a component and added styling with CSS modules. I've become a big fan of CSS modules since they keep all styling separate and there's no need to worry about repeating a classname and accidentally overriding styles.</p>
 
 <h2>Lessons Learned</h2>
 <p>I wanted the navigation component to update its styling depending on what section a user is on. Initially I kept this very basic and updated state depending on what nav item was clicked, but I quickly realized this wasn't a flawless solution as page scroll would leave the active nav item incorrect.
