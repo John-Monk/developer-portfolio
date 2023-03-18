@@ -49,8 +49,10 @@
 }
 
 .project__item{ 
-    border: 2px solid var(--main);
     height: 10em;
+    border-radius: 0.5em;
+    overflow: hidden;
+    border: 2px solid var(--theme);
 }
 
 @media screen and (min-width: 600px) {
