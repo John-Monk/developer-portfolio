@@ -68,7 +68,7 @@ export default function Home() {
       </Head>
         <header className={`${styles.header} ${pageLoad ? styles.header__active : ''}`}>
             <div className={`container ${styles.content}`}>
-              <a className={`${styles.logo} ${pageLoad ? styles.logo__load : ''}`} href="https://johnmonk.dev/">johnmonk.dev</a>
+              <a className={`${styles.logo} ${pageLoad ? styles.logo__load : ''}`} href="#">johnmonk.dev</a>
               <Nav currentSection={currentSection} pageLoad={pageLoad} navLoad={navLoad}/>
             </div>
         </header>
