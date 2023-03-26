@@ -41,7 +41,7 @@
     transform: translate(-50%, -50%);
 }
 
-.project__list {
+/* .project__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -53,7 +53,7 @@
     border-radius: 0.5em;
     overflow: hidden;
     border: 2px solid var(--theme);
-}
+} */
 
 @media screen and (min-width: 600px) {
     .portfolio {
@@ -101,7 +101,7 @@
         width: 100%;
     }
 
-    .project__item{ 
+    /* .project__item{ 
         height: 12em;
-    }
+    } */
 }
