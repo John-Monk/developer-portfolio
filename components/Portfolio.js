@@ -13,6 +13,7 @@ import reactjs from '../public/reactjs.svg';
 import Image from 'next/image';
 import ProjectCard from './ProjectCard';
 import restaurantProject from '../public/restaurant.webp';
+import linkGeneratorApp from '../public/link-generator-app.webp';
 
 export default function Portfolio() {
   return (
@@ -37,7 +38,7 @@ export default function Portfolio() {
                 <h2 className={styles.title}>Recent Work</h2>
                     <ul className={styles.project__list}>
                         <li className={styles.project__item}><ProjectCard image={restaurantProject} live={'https://incredible-medovik-5ae8d9.netlify.app/'} code={'https://github.com/John-Monk/restaurant-landing'}/></li>
-                        <li className={styles.project__item}><Image /></li>
+                        <li className={styles.project__item}><ProjectCard image={linkGeneratorApp} live={'https://main--deft-dasik-802c2c.netlify.app/'} code={'https://github.com/John-Monk/link-page-generator'}/></li>
                         <li className={styles.project__item}><Image /></li>
                         <li className={styles.project__item}><Image /></li>
                     </ul>
