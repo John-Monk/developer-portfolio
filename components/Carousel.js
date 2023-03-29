@@ -27,6 +27,38 @@ const projectData = [
 ];
 
 export default function Carousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [projects, setProjects] = useState(projectData);
+  const [mouseOver, setMouseOver] = useState(false);
+
+  useEffect(() => {
+    if(!mouseOver){
+      const intervalId = setInterval(() => {
+        setCurrentIndex(prev =>
+          prev === projects.length - 1 ? 0 : prev + 1
+        );
+    }, 4000);
+  
+      return () => clearInterval(intervalId);
+    }
+  }, [projects.length, mouseOver]);
+
+  const back = () => {
+    setCurrentIndex((prev) => prev === 0 ? projectData.length - 1 : prev - 1);
+  };
+
+  const forward = () => {
+    setCurrentIndex((prev) => prev === projectData.length - 1 ? 0 : prev + 1);
+  };
+
+  const handleMouseEnter = () => {
+    setMouseOver(true)
+  }
+
+  const handleMouseLeave = () => {
+    setMouseOver(false)
+  }
+
   return (
     <div>Carousel</div>
   )
