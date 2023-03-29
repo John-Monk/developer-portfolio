@@ -60,6 +60,35 @@ export default function Carousel() {
   }
 
   return (
-    <div>Carousel</div>
-  )
+    <section 
+      className={styles.container}     
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      >
+      <div className={styles.button__container}>
+        <button onClick={back} className={styles.button}>
+          <LeftArrow />
+        </button>
+        <button onClick={forward} className={styles.button}>
+          <RightArrow />
+        </button>
+        {mouseOver ? <Pause className={styles.mouseover__status}/> : <Play className={styles.mouseover__status}/>}
+      </div>
+      <div className={styles.project__container}>
+        {projects.map(({ title, description, live, code, image }, index) => {
+          return (
+              <div className={`${styles.project} ${index === currentIndex ? styles.current : ''}`}
+              >
+                <Project 
+                  title={title} 
+                  description={description}
+                  live={live}
+                  code={code}
+                  image={image} />
+              </div>
+          );
+        })}
+      </div>
+    </section>
+  );
 }
