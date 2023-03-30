@@ -106,11 +106,21 @@ a {
   }
 } */
 
-:root {
+/* :root {
   --main: white;
   --accent: black;
   --theme: orange;
+} */
+
+:root {
+  --main: white;
+  --accent: black;
+  --theme: rgb(255, 162, 0);
 }
+
+/* --accent: rgb(109, 132, 105);
+--theme: #e4572e;
+} */
 /* :root {
   --main: white;
   --accent: #3a3335;
