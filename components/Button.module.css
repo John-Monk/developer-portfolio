@@ -1,0 +1,20 @@
+.button {
+    border: 2px solid var(--main);
+    padding: 0.25em 0.5em;
+    margin: 1.5em 0;
+    border-radius: 0.3em;
+    transition: 200ms;
+    color: var(--main)
+}
+
+.button:hover {
+    background: var(--main);
+    color: var(--theme);
+    transition: 200ms;
+}
+
+.button:active {
+    background: var(--theme);
+    color: var(--main);
+    transform: translateY(-0.25em);
+}
