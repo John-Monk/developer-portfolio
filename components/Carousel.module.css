@@ -1,6 +1,6 @@
 .container {
     position: relative;
-    border: 2px solid var(--theme);
+    /* border: 2px solid var(--theme); */
     border-radius: 0.5em;
     height: 18em;
     overflow: hidden;
