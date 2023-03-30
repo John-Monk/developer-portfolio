@@ -72,7 +72,7 @@ export default function Carousel() {
         <button onClick={forward} className={styles.button}>
           <RightArrow />
         </button>
-        {mouseOver ? <Pause className={styles.mouseover__status}/> : <Play className={styles.mouseover__status}/>}
+        {mouseOver && <Pause className={styles.mouseover__status}/> }
       </div>
       <div className={styles.project__container}>
         {projects.map(({ title, description, live, code, image }, index) => {
