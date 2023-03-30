@@ -2,6 +2,7 @@ import React from "react"
 import styles from "./Contact.module.css";
 import {AiOutlineMail} from "react-icons/ai";
 import { useState, useEffect } from "react";
+import Button from "./Button";
 
 export default function Contact() {
     const [name, setName] = useState("");
@@ -68,7 +69,7 @@ export default function Contact() {
                             <textarea onChange={(e) => setMessage(e.target.value)} className={`${styles.input} ${styles.message__input}`} name="message" rows="3" id="message" type="text" value={message} required/>
                         </li>
                     </ul>
-                    <button className={styles.button}>Submit</button>
+                    <Button>Submit</Button>
                 </form>
             <a className={styles.email} href="mailto:johntmonk1@gmail.com"><AiOutlineMail />johntmonk1@gmail.com</a>
         </div>
