@@ -5,6 +5,7 @@ import linkGenerator from '../public/link-generator-app.webp';
 import restaurant from '../public/restaurant.webp';
 import { RxDot, RxDotFilled } from 'react-icons/rx';
 import { BsArrowLeftSquareFill as LeftArrow, BsArrowRightSquareFill as RightArrow, BsPauseCircle as Pause, BsPlayCircle as Play} from 'react-icons/bs';
+import {IoIosArrowForward, IoIosArrowBack} from 'react-icons/io';
 import Image from 'next/image';
 
 import { useState, useEffect } from 'react';
@@ -67,10 +68,12 @@ export default function Carousel() {
       >
       <div className={styles.button__container}>
         <button onClick={back} className={styles.button}>
-          <LeftArrow />
+          {/* <LeftArrow /> */}
+          <IoIosArrowBack />
         </button>
         <button onClick={forward} className={styles.button}>
-          <RightArrow />
+          {/* <RightArrow /> */}
+          <IoIosArrowForward />
         </button>
         {mouseOver && <Pause className={styles.mouseover__status}/> }
       </div>
