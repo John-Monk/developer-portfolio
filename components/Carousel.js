@@ -11,15 +11,15 @@ import { useState, useEffect } from 'react';
 
 const projectData = [
   {
-    title: 'Link Page Markup Generator',
-    description: 'A user friendly web app for generating HTML and CSS markup for link pages',
+    title: 'Link Page Generator',
+    description: 'A user friendly web app for generating HTML and CSS markup for self hosting link pages',
     live: 'https://main--deft-dasik-802c2c.netlify.app/',
     code: 'https://github.com/John-Monk/link-page-generator',
     image: linkGenerator,
   },
   {
     title: 'Restaurant Landing Page',
-    description: 'Restaurant landing page built with NextJS',
+    description: 'Fully responsive restaurant landing page built with NextJS',
     live: 'https://incredible-medovik-5ae8d9.netlify.app/',
     code: 'https://github.com/John-Monk/restaurant-landing',
     image: restaurant,
