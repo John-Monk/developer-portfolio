@@ -71,7 +71,7 @@ export default function Contact() {
                     </ul>
                     <Button>Submit</Button>
                 </form>
-            <a className={styles.email} href="mailto:johntmonk1@gmail.com"><AiOutlineMail />johntmonk1@gmail.com</a>
+            <a className={styles.email} href="mailto:johnmonkdev@gmail.com"><AiOutlineMail />johnmonkdev@gmail.com</a>
         </div>
     </section>
   )
